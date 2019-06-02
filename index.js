@@ -6,8 +6,10 @@ const betweenPage = '\t\t'
 
 const main = async () => {
     const image = await readImageFileAsync(imagePath)
-    console.log(image.bitmap.width)
-    console.log(image.bitmap.height)
+    
+    if(image.bitmap.width !== stand.width * plateSize.width || image.bitmap.height !== stand.height * plateSize.height) {                       
+        throw error(`Cannot convert picture due to wrong size image`)
+    }
 
     let currentRow = 0;
     await clearFile(outputFilename);
@@ -21,7 +23,11 @@ const main = async () => {
         
         for(let x = 0; x < image.bitmap.width; x++){
             line += `${colorPalette[image.getPixelColor(x,y).toString(16)]} `
-            
+
+            if(!line) {
+                throw error('Color mismatch')
+            }
+
             if((x+1) % plateSize.width === 0 ) {
                 line += betweenPage
             }
