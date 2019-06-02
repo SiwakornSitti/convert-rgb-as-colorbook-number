@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "jimp": "^0.6.4"
-  }
+  },
+  "name": "convert-picture",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiwakornSitti/convert-rgb-as-colorbook-number.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiwakornSitti/convert-rgb-as-colorbook-number/issues"
+  },
+  "homepage": "https://github.com/SiwakornSitti/convert-rgb-as-colorbook-number#readme",
+  "description": ""
 }
